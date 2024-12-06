@@ -21,3 +21,11 @@ def get_geolocation(ip_address):
     except Exception as e:
         print(f"Ошибка: {e}")
         return None
+
+ip = "8.8.8.8"  # Пример IP-адреса
+geolocation = get_geolocation(ip)
+
+if geolocation:
+    print(f"Широта: {geolocation['latitude']}")
+    print(f"Долгота: {geolocation['longitude']}")
+    print(f"Город: {geolocation['city']}")
