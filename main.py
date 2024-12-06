@@ -22,10 +22,14 @@ def get_geolocation(ip_address):
         print(f"Ошибка: {e}")
         return None
 
-ip = "8.8.8.8"  # Пример IP-адреса
-geolocation = get_geolocation(ip)
+# Пример использования функции
+if __name__ == "__main__":
+    ip = "8.8.8.8"  # Пример IP-адреса
+    geolocation = get_geolocation(ip)
 
-if geolocation:
-    print(f"Широта: {geolocation['latitude']}")
-    print(f"Долгота: {geolocation['longitude']}")
-    print(f"Город: {geolocation['city']}")
+    if geolocation:
+        print(f"Широта: {geolocation['latitude']}")
+        print(f"Долгота: {geolocation['longitude']}")
+        print(f"Город: {geolocation['city']}")
+    else:
+        print("Не удалось получить информацию о местоположении.")
