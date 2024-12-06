@@ -24,7 +24,7 @@ def get_geolocation(ip_address):
 
 # Пример использования функции
 if __name__ == "__main__":
-    ip = "8.8.8.8"  # Пример IP-адреса
+    ip = str(input())  # IP
     geolocation = get_geolocation(ip)
 
     if geolocation:
